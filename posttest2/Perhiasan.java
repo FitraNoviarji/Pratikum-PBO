@@ -10,6 +10,7 @@ package com.mycompany.posttest2;
  */
 class Perhiasan {
         // property 
+    private int nomorPerhiasan ;
     private String namaperhiasan;
     private String jenis;
     private int Karat;
@@ -17,7 +18,8 @@ class Perhiasan {
     
     
     // constructor || ini juga digunakan untuk bisa menghubungan objek dan arraylist biar enak dipanggil
-    public Perhiasan(String namaperhiasan, String jenis, int Karat, double Berat){
+    public Perhiasan(int nomorPerhiasan, String namaperhiasan, String jenis, int Karat, double Berat){
+        this.nomorPerhiasan = nomorPerhiasan ;
         this.namaperhiasan = namaperhiasan;
         this.jenis = jenis;
         this.Karat = Karat;
@@ -27,6 +29,15 @@ class Perhiasan {
     /**
      * @return the namaperhiasan
      */
+    
+    public int getNomorPerhiasan() {
+    return nomorPerhiasan;
+    }
+
+    public void setNomorPerhiasan(int nomorPerhiasan) {
+        this.nomorPerhiasan = nomorPerhiasan;
+    }
+    
     public String getNamaperhiasan() {
         return namaperhiasan;
     }
@@ -80,24 +91,10 @@ class Perhiasan {
         this.Berat = Berat;
     }
     
-     // method
-    public void registrasi(){
-        System.out.println("Nama perhiasan  :" + this.getNamaperhiasan());
-        System.out.println("Jenis           :" + this.getJenis());
-        System.out.println("Karat           :" + this.getKarat());
-        System.out.println("Berat           :" + this.getBerat());
-        System.out.println("Telah Terdata Di sistem");
-    }
-    
-    public void terupdate(){
-        System.out.println("Nama perhiasan  :" + this.getNamaperhiasan());
-        System.out.println("Jenis           :" + this.getJenis());
-        System.out.println("Karat           :" + this.getKarat());
-        System.out.println("Berat           :" + this.getBerat());
-        System.out.println("Telah Terupdate Di sistem");
-    }
+
+}
    
   
-}
+
 
 
